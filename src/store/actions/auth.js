@@ -9,7 +9,6 @@ export const authStart = () => {
 };
 
 export const authSuccess = (token, userId) => {
-    console.log('userId', userId);
     return {
         type: actionTypes.AUTH_SUCCESS,
         idToken: token,
@@ -76,7 +75,6 @@ export const setAuthRedirectPath = (path) => {
 };
 
 export const authCheckState = () => {
-    console.log("CHECKING");
     return dispatch => {
         const token = localStorage.getItem('token');
         if (!token) {
